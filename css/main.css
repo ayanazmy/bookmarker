@@ -1,0 +1,55 @@
+body {
+    background-color: #ddd;
+}
+
+.content {
+    color: #1e3764;
+}
+
+.submitBtn {
+    background-color: #1e3764;
+    color: #fff;
+}
+
+
+.submitBtn.btn:hover {
+    background-color: #305496;
+    color: #fff;
+}
+
+.bookmarks {
+    color: #1e3764;
+
+    .visit,
+    .delete {
+        cursor: pointer;
+    }
+
+    .visit {
+        text-align: left;
+    }
+
+    .visit a {
+        text-decoration: none;
+        color: #1e3764;
+
+        &:hover {
+            color: #305496;
+        }
+    }
+}
+
+.image-container {
+    animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+

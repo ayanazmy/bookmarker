@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quintessential&display=swap"
+        rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row gy-3 my-5 justify-content-between">
+            <div class="col-lg-3 col-md-4 image-container mx-auto">
+                <img src="./imgs/workstudy-img-removebg-preview.png" alt="girl on a laptop" class="w-100">
+            </div>
+            <div class="col-md-7 content mt-5">
+                <h2 class="mb-5">Bookmark your favourite sites</h2>
+                <div class="inputs mt-5">
+                    <div class="mb-3">
+                        <label for="siteName" class="form-label">Site name</label>
+                        <input type="text" class="form-control" id="siteName" placeholder="Bookmark name" oninput="validateInputs(this)">
+                        <p class="text-danger d-none validate-name">Invalid input, Name should contain 3-15 characters</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="siteUrl" class="form-label">Site URL</label>
+                        <input type="text" class="form-control" id="siteUrl" placeholder="Website URL" oninput="validateInputs(this)">
+                        <p class="text-danger d-none validate-url">Please enter a valid URL, it should start with http or https ex: https://your-domain.com</p>
+                    </div>
+                    <button disabled="true" class="btn submitBtn" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bookmarks bg-light py-3 rounded">
+            <div class="px-3 text-center fs-4" id="no-bookmarks">
+                You have no bookmarks yet
+                <i class="fa-regular fa-face-frown"></i>
+                <p class="text-center fs-6 mt-3">Any bookmarks you add will be displayed here</p>
+            </div>
+            <input type="text" class="form-control w-50 mx-auto mb-5 d-none" id="searchInput" placeholder="Search..." oninput="search(this)">
+            <div class="bookmarksContent" id="bookmarks">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
